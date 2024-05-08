@@ -30,7 +30,7 @@ const userController = (
     }
   );
 
-  // get user by toke id
+  // get user by token id
   const getUserDataById = expressAsyncHandler(
     async (req: Request, res: Response) => {
       const customReq = req as CustomRequest;
