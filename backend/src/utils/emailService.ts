@@ -4,6 +4,9 @@ import configKeys from "../config";
 export const sendEmailService = () => {
   const transporter: Transporter = nodemailer.createTransport({
     service: "gmail",
+    host: 'smtp.gmail.com',
+    port: 465,
+   secure: true,
     auth: {
       user: configKeys.NODE_MAIL_USER,
       pass: configKeys.NODE_MAIL_PASS,
