@@ -1,10 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import store from "./features/redux/app/Store";
+import "./index.css";
+import { Provider } from "react-redux";
+import App from "./App";
+import { ThemeProvider } from "@material-tailwind/react";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import constants from "./utils/constants";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+const googleAuthClient = constants.GOOGLE_AUTH_CLIENT;
+
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+      <GoogleOAuthProvider clientId={googleAuthClient}>
+        <Provider store={store}>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </Provider>
+      </GoogleOAuthProvider>
+  </React.StrictMode>
+);
