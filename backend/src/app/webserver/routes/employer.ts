@@ -3,7 +3,7 @@ import employerController from '../../../controllers/employerController';
 import { employerRepository } from '../../../repositories/employerRepository';
 import { EmployerRepositoryMongoDB } from '../../database/repositories/employerRepositoryMongoDB';
 import { Employer } from '../../database/models/employerModel';
-import { upload } from '../../../utils/multerCloudinary';
+import { upload } from '../../../utils/Cloudinary';
 import authenticationMiddleware from '../middleware/authenticationMiddleware';
 import roleMiddleware from '../middleware/roleMiddleware';
 

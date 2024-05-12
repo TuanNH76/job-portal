@@ -2,7 +2,7 @@ import { HttpStatus } from "../../types/httpStatus";
 import { CreateUserInterface } from "../../types/userInterface";
 import { UserDbInterface } from "../../repositories/userRepository";
 import { AuthServiceInterface } from "./authService";
-import { GoogleAuthServiceInterface } from "./googleAuthService";
+// import { GoogleAuthServiceInterface } from "./googleAuthService";
 import AppError from "../../utils/appError";
 import { UserEntity } from "../../entities/UserEntity";
 
@@ -49,22 +49,22 @@ export const userLogin = async (
 };
 
 // login with google
-export const signInWithGoogle = async (
-  credential: string,
-  googleAuthService: ReturnType<GoogleAuthServiceInterface>,
-  userRepository: ReturnType<UserDbInterface>,
-  authService: ReturnType<AuthServiceInterface>
-) => {
-  const user = await googleAuthService.verify(credential);
-  const isUserExist = await userRepository.getUserByEmail(user.email);
-  if (isUserExist) {
-    const payload = isUserExist?._id?.toString();
-    const token = authService.generateToken(payload ?? '', 'user');
-    return token;
-  } else {
-    const { _id: userId} = await userRepository.createUser(user);
-    const payload = userId?.toString();
-    const token = authService.generateToken(payload ?? '', 'user');
-    return token;
-  }
-};
+// export const signInWithGoogle = async (
+//   credential: string,
+//   googleAuthService: ReturnType<GoogleAuthServiceInterface>,
+//   userRepository: ReturnType<UserDbInterface>,
+//   authService: ReturnType<AuthServiceInterface>
+// ) => {
+//   const user = await googleAuthService.verify(credential);
+//   const isUserExist = await userRepository.getUserByEmail(user.email);
+//   if (isUserExist) {
+//     const payload = isUserExist?._id?.toString();
+//     const token = authService.generateToken(payload ?? '', 'user');
+//     return token;
+//   } else {
+//     const { _id: userId} = await userRepository.createUser(user);
+//     const payload = userId?.toString();
+//     const token = authService.generateToken(payload ?? '', 'user');
+//     return token;
+//   }
+// };

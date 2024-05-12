@@ -2,7 +2,7 @@ import { Types } from "mongoose";
 import { JobApplicationRepositoryMongoDB } from "../app/database/repositories/jobApplicationRepositoryMongoDB";
 import { JobApplicationInterface } from "../types/jobApplicationInterface";
 
-export const jobApplicationDbRepository = (
+export const jobApplicationRepository = (
     repository: ReturnType<JobApplicationRepositoryMongoDB>
 ) => {
     const applyForJob = async (application: JobApplicationInterface) => {
@@ -45,4 +45,4 @@ export const jobApplicationDbRepository = (
     }
 }
 
-export type JobApplicationDbInterface = typeof jobApplicationDbRepository;
+export type JobApplicationDbInterface = typeof jobApplicationRepository;

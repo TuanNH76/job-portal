@@ -2,18 +2,18 @@ import express from "express";
 import employerAuthController from "../../../controllers/employerAuthController";
 import { employerRepository } from "../../../repositories/employerRepository";
 import { EmployerRepositoryMongoDB } from "../../database/repositories/employerRepositoryMongoDB";
-import { authService } from "../../../utils/authService";
+import { auth } from "../../../utils/auth";
 import { authService } from "../../../services/auth/authService";
 import {Employer} from "../../database/models/employerModel";
 import { emailService } from "../../../services/auth/emailService";
-import { sendEmailService } from "../../../utils/emailService";
+import { sendEmailService } from "../../../utils/email";
 
 const employerAuthRouter = () => {
   const route = express.Router();
 
   const controller = employerAuthController(
     authService,
-    authService,
+    auth,
     employerRepository,
     EmployerRepositoryMongoDB,
     Employer,

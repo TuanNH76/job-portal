@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import expressAsyncHandler from "express-async-handler";
-import { AuthService } from "../utils/authService";
+import { AuthService } from "../utils/auth";
 import { AuthServiceInterface } from "../services/auth/authService";
 import { UserDbInterface } from "../repositories/userRepository";
 import { UserRepositoryMongoDB } from "../app/database/repositories/userRepositoryMongoDB";
-import { userLogin, registerUser, signInWithGoogle } from "../services/auth/userAuthService";
+import { userLogin, registerUser } from "../services/auth/userAuthService";
 import { CreateUserInterface, UserInterface } from "../types/userInterface";
 import { UserModel } from "../app/database/models/userModel";
 

@@ -3,7 +3,7 @@ import userController from '../../../controllers/userControllers';
 import { userRepository } from '../../../repositories/userRepository';
 import { UserRepositoryMongoDB } from '../../database/repositories/userRepositoryMongoDB';
 import { User } from '../../database/models/userModel';
-import { upload } from '../../../utils/multerCloudinary';
+import { upload } from '../../../utils/Cloudinary';
 import authenticationMiddleware from '../middleware/authenticationMiddleware';
 import roleMiddleware from '../middleware/roleMiddleware';
 

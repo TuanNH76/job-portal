@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import expressAsyncHandler from "express-async-handler";
-import { AuthService } from "../utils/authService";
+import { AuthService } from "../utils/auth";
 import { AuthServiceInterface } from "../services/auth/authService";
 import { EmployerDbInterface } from "../repositories/employerRepository";
 import { EmployerRepositoryMongoDB } from "../app/database/repositories/employerRepositoryMongoDB";
@@ -18,7 +18,7 @@ import { EmailServiceInterface } from "../services/auth/emailService";
 import {
   SendEmailService,
   sendEmailService,
-} from "../utils/emailService";
+} from "../utils/email";
 
 const employerAuthController = (
   authServiceInterface: AuthServiceInterface,

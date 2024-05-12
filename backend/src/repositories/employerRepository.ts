@@ -1,7 +1,7 @@
  import { EmployerRepositoryMongoDB } from "../app/database/repositories/employerRepositoryMongoDB";
  import { CreateEmployerInterface, EmployerInterface } from "../types/employerInterface";
 
- export const employerDbRepository = (
+ export const employerRepository = (
     repository: ReturnType<EmployerRepositoryMongoDB>
  ) => {
     const getEmployerByEmail = async (email: string) => {
@@ -30,4 +30,4 @@
     }
  }
 
- export type EmployerDbInterface = typeof employerDbRepository;
+ export type EmployerDbInterface = typeof employerRepository;
