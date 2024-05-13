@@ -46,24 +46,24 @@ export const userLogin = async (
   const token = authService.generateToken(payload, 'user');
   return token;
 };
-
-// login with google
-export const signInWithGoogle = async (
-  credential: string,
-  googleAuthService: ReturnType<GoogleAuthServiceInterface>,
-  userRepository: ReturnType<UserDbInterface>,
-  authService: ReturnType<AuthServiceInterface>
-) => {
-  const user = await googleAuthService.verify(credential);
-  const isUserExist = await userRepository.getUserByEmail(user.email);
-  if (isUserExist) {
-    const payload = isUserExist?._id?.toString();
-    const token = authService.generateToken(payload ?? '', 'user');
-    return token;
-  } else {
-    const { _id: userId} = await userRepository.createUser(user);
-    const payload = userId?.toString();
-    const token = authService.generateToken(payload ?? '', 'user');
-    return token;
-  }
-};
+//
+// // login with google
+// export const signInWithGoogle = async (
+//   credential: string,
+//   googleAuthService: ReturnType<GoogleAuthServiceInterface>,
+//   userRepository: ReturnType<UserDbInterface>,
+//   authService: ReturnType<AuthServiceInterface>
+// ) => {
+//   const user = await googleAuthService.verify(credential);
+//   const isUserExist = await userRepository.getUserByEmail(user.email);
+//   if (isUserExist) {
+//     const payload = isUserExist?._id?.toString();
+//     const token = authService.generateToken(payload ?? '', 'user');
+//     return token;
+//   } else {
+//     const { _id: userId} = await userRepository.createUser(user);
+//     const payload = userId?.toString();
+//     const token = authService.generateToken(payload ?? '', 'user');
+//     return token;
+//   }
+// };
