@@ -1,6 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 import { CustomRequest } from "../../../types/expressRequest";
-import { authService } from "../../../utils/authService";
+import { auth } from "../../../utils/auth";
 import AppError from "../../../utils/appError";
 import { HttpStatus } from "../../../types/httpStatus";
 
@@ -18,7 +18,7 @@ const authenticationMiddleware = (
     throw new AppError('Token not found', HttpStatus.UNAUTHORIZED);
   }
   try {
-    const { payload, role }: any = authService().verifyToken(token);
+    const { payload, role }: any = auth().verifyToken(token);
     customReq.payload = payload;
     customReq.role = role;
     next();

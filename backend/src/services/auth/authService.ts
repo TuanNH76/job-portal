@@ -1,4 +1,4 @@
-import { AuthServiceReturn } from "../../utils/authService";
+import { AuthServiceReturn } from "../../utils/auth";
 
 export const authService = (service: AuthServiceReturn) => {
   const encryptPassword = (password: string) =>

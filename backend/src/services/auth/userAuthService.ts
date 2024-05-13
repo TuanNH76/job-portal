@@ -2,7 +2,6 @@ import { HttpStatus } from "../../types/httpStatus";
 import { CreateUserInterface } from "../../types/userInterface";
 import { UserDbInterface } from "../../repositories/userRepository";
 import { AuthServiceInterface } from "./authService";
-import { GoogleAuthServiceInterface } from "./googleAuthService";
 import AppError from "../../utils/appError";
 import { UserEntity } from "../../entities/UserEntity";
 

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import expressAsyncHandler from "express-async-handler";
-import { AuthService } from "../utils/authService";
+import { AuthService } from "../utils/auth";
 import { AuthServiceInterface } from "../services/auth/authService";
 import { UserDbInterface } from "../repositories/userRepository";
 import { UserRepositoryMongoDB } from "../app/database/repositories/userRepositoryMongoDB";
