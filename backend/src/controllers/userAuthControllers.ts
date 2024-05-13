@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import expressAsyncHandler from "express-async-handler";
 import { AuthService } from "../utils/auth";
 import { AuthServiceInterface } from "../services/auth/authService";
-import { UserDbInterface } from "../repositories/userRepository";
+import { UserRepository } from "../repositories/userRepository";
 import { UserRepositoryMongoDB } from "../app/database/repositories/userRepositoryMongoDB";
 import { userLogin, registerUser} from "../services/auth/userAuthService";
 import { CreateUserInterface, UserInterface } from "../types/userInterface";
@@ -11,7 +11,7 @@ import { UserModel } from "../app/database/models/userModel";
 const authController = (
   authServiceInterface: AuthServiceInterface,
   authServiceImpl: AuthService,
-  userDbRepository: UserDbInterface,
+  userDbRepository: UserRepository,
   userDbRepositoryImpl: UserRepositoryMongoDB,
   userModel: UserModel,
 

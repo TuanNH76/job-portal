@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { CustomRequest } from "../types/expressRequest";
-import { UserDbInterface } from "../repositories/userRepository";
+import { UserRepository } from "../repositories/userRepository";
 import { UserRepositoryMongoDB } from "../app/database/repositories/userRepositoryMongoDB";
 import expressAsyncHandler from "express-async-handler";
 import { UserModel } from "../app/database/models/userModel";
@@ -16,7 +16,7 @@ import {
 } from "../services/user/userService";
 
 const userController = (
-  userDbRepository: UserDbInterface,
+  userDbRepository: UserRepository,
   userDbRepositoryImpl: UserRepositoryMongoDB,
   userModel: UserModel
 ) => {

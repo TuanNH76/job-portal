@@ -1,6 +1,6 @@
 import { HttpStatus } from "../../types/httpStatus";
 import { CreateUserInterface } from "../../types/userInterface";
-import { UserDbInterface } from "../../repositories/userRepository";
+import { UserRepository } from "../../repositories/userRepository";
 import { AuthServiceInterface } from "./authService";
 import AppError from "../../utils/appError";
 import { UserEntity } from "../../entities/UserEntity";
@@ -8,7 +8,7 @@ import { UserEntity } from "../../entities/UserEntity";
 // creating a new user
 export const registerUser = async (
   user: CreateUserInterface,
-  userRepository: ReturnType<UserDbInterface>,
+  userRepository: ReturnType<UserRepository>,
   authService: ReturnType<AuthServiceInterface>
 ) => {
   user.email = user.email.toLowerCase();
@@ -25,7 +25,7 @@ export const registerUser = async (
 export const userLogin = async (
   email: string,
   password: string,
-  userRepository: ReturnType<UserDbInterface>,
+  userRepository: ReturnType<UserRepository>,
   authService: ReturnType<AuthServiceInterface>
 ) => {
   const user   = await userRepository.getUserByEmail(email);
@@ -51,7 +51,7 @@ export const userLogin = async (
 // export const signInWithGoogle = async (
 //   credential: string,
 //   googleAuthService: ReturnType<GoogleAuthServiceInterface>,
-//   userRepository: ReturnType<UserDbInterface>,
+//   userRepository: ReturnType<UserRepository>,
 //   authService: ReturnType<AuthServiceInterface>
 // ) => {
 //   const user = await googleAuthService.verify(credential);

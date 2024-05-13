@@ -1,11 +1,11 @@
 import { EmployerInterface } from "../../types/employerInterface";
 import { HttpStatus } from "../../types/httpStatus";
 import AppError from "../../utils/appError";
-import { EmployerDbInterface } from "../../repositories/employerRepository";
+import { EmployerRepository } from "../../repositories/employerRepository";
 
 export const findEmployerById = (
   id: string,
-  dbRepositoryEmployer: ReturnType<EmployerDbInterface>
+  dbRepositoryEmployer: ReturnType<EmployerRepository>
 ) => {
     try {
         const employer = dbRepositoryEmployer.findEmployerById(id);
@@ -21,7 +21,7 @@ export const findEmployerById = (
 export const updatedEmployer = (
     employerId: string,
     updates: Partial<EmployerInterface>,
-    dbRepositoryEmployer: ReturnType<EmployerDbInterface>
+    dbRepositoryEmployer: ReturnType<EmployerRepository>
 ) => {
     try {
         const employer   = dbRepositoryEmployer.updateEmployer(employerId, updates);

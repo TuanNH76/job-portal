@@ -1,13 +1,13 @@
 import { HttpStatus } from "../../types/httpStatus";
 import { CreateEmployerInterface } from "../../types/employerInterface";
 import AppError from "../../utils/appError";
-import { EmployerDbInterface } from "../../repositories/employerRepository";
+import { EmployerRepository } from "../../repositories/employerRepository";
 import { AuthServiceInterface } from "./authService";
 import { EmailServiceInterface } from "./emailService";
 
 export const registerEmployer = async (
   employer: CreateEmployerInterface,
-  employerRepository: ReturnType<EmployerDbInterface>,
+  employerRepository: ReturnType<EmployerRepository>,
   authService: ReturnType<AuthServiceInterface>
 ) => {
   employer.email = employer?.email?.toLowerCase();
@@ -25,7 +25,7 @@ export const registerEmployer = async (
 export const employerLogin = async (
   email: string,
   password: string,
-  employerRepository: ReturnType<EmployerDbInterface>,
+  employerRepository: ReturnType<EmployerRepository>,
   authService: ReturnType<AuthServiceInterface>
 ) => {
   const employer = await employerRepository.getEmployerByEmail(email);
@@ -46,7 +46,7 @@ export const employerLogin = async (
 
 export const employerEmailVerification = async (
   email: string,
-  employerRepository: ReturnType<EmployerDbInterface>,
+  employerRepository: ReturnType<EmployerRepository>,
   emailService: ReturnType<EmailServiceInterface>
 ) => {
   const existingEmail = await employerRepository.getEmployerByEmail(email);

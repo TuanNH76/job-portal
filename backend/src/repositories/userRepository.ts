@@ -1,7 +1,7 @@
 import { UserRepositoryMongoDB } from "../app/database/repositories/userRepositoryMongoDB";
 import { CreateUserInterface, UserInterface } from "../types/userInterface";
 
-export const userDbRepository = (
+export const userRepository = (
   repository: ReturnType<UserRepositoryMongoDB>
 ) => {
   // get user by email id
@@ -37,4 +37,4 @@ export const userDbRepository = (
   };
 };
 
-export type UserDbInterface = typeof userDbRepository;
+export type UserRepository = typeof userRepository;

@@ -1,7 +1,7 @@
 import { JobRepositoryMongoDB } from "../app/database/repositories/jobRepositoryMongoDB";
 import { JobInterface } from "../types/jobInterface";
 
-export const jobDbRepository = (
+export const jobRepository = (
     repository : ReturnType<JobRepositoryMongoDB>
 )=> {
     const createJob = async (job: JobInterface) => {
@@ -55,4 +55,4 @@ export const jobDbRepository = (
     }
 }
 
-export type JobDbInterface = typeof jobDbRepository; 
+export type JobRepository = typeof jobRepository;

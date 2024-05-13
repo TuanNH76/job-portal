@@ -1,7 +1,7 @@
 import { MessagesInterface } from "../types/messengerInterface";
 import { MessageRepositoryMongoDB } from "../app/database/repositories/messageRepositoryMongoDB";
 
-export const messageDbRepository = (
+export const messageRepository = (
     repository: ReturnType<MessageRepositoryMongoDB>
 ) => {
     const newMessage = async (message: MessagesInterface) => {
@@ -20,4 +20,4 @@ export const messageDbRepository = (
     }
 }
 
-export type MessageDbInterface = typeof messageDbRepository;
+export type MessageRepository = typeof messageRepository;

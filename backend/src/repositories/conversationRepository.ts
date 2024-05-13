@@ -20,4 +20,4 @@ export const conversationRepository = (
     }
 }
 
-export type ConversationDbInterface = typeof conversationRepository;
+export type ConversationRepository = typeof conversationRepository;
