@@ -5,6 +5,7 @@ import { Application } from "express";
 import userRouter from "./user";
 import authenticationMiddleware from "../middleware/authenticationMiddleware";
 import employerRouter from "./employer";
+import jobApplicationRouter from "./jobApplications";
 
 
 const routes = (app: Application) => {
