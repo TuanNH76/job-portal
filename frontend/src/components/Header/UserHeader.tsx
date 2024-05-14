@@ -20,22 +20,22 @@ function classNames(...classes: string[]) {
 }
 
 function UserHeader() {
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
-  // const user = useSelector((state: RootState) => state.userDetails.userDetails);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const user = useSelector((state: RootState) => state.userDetails.userDetails);
 
-  // useEffect(() => {
-  //   dispatch(fetchUser());
+  useEffect(() => {
+    dispatch(fetchUser());
 
-  //   return () => {
-  //     dispatch(clearUserDetails());
-  //   };
-  // }, [dispatch]);
+    return () => {
+      dispatch(clearUserDetails());
+    };
+  }, [dispatch]);
 
   const handleLogout = () => {
-    // dispatch(logout());
-    // dispatch(clearToken());
-    // navigate("/");
+    dispatch(logout());
+    dispatch(clearToken());
+    navigate("/");
   };
 
   return (

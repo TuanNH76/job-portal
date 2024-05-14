@@ -55,7 +55,7 @@ function UserProfile() {
 
   return (
     <div className="pl-16 pr-16 pt-10">
-      <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url(https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80)] bg-cover	bg-center">
+      <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url(https://media.istockphoto.com/id/1129644198/vector/recruitment-modern-line-design-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZBHS-k5azwnflpGW5gRmseB4CxUOpUUmGA3I45mJk9E=)] bg-cover	bg-center">
         <div className="absolute inset-0 h-full w-full bg-purple-500/50" />
       </div>
       <Card className="mx-3 -mt-16 mb-6 lg:mx-4 shadow-lg shadow-gray-400">
@@ -66,7 +66,7 @@ function UserProfile() {
                 src={userDetails?.image ?? ""}
                 alt="img"
                 size="xl"
-                className="rounded-lg shadow-lg shadow-blue-gray-500/40"
+                className="rounded-lg shadow-lg shadow-blue-gray-500/40 max-w-24"
               />
               <div>
                 <Typography variant="h5" color="blue-gray" className="mb-1">
