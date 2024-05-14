@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { CustomRequest } from "../types/expressRequest";
 import { JobRepositoryMongoDB } from "../app/database/repositories/jobRepositoryMongoDB";
-import { JobDbInterface } from "../repositories/jobRepository";
+import { JobRepository } from "../repositories/jobRepository";
 import { JobInterface } from "../types/jobInterface";
 import { JobModel } from "../app/database/models/jobModel";
 import { Types } from "mongoose";
@@ -20,7 +20,7 @@ import {
 } from "../services/job/jobService";
 
 const jobController = (
-  jobDbRepository: JobDbInterface,
+  jobDbRepository: JobRepository,
   jobDbRepositoryImpl: JobRepositoryMongoDB,
   jobModel: JobModel
 ) => {

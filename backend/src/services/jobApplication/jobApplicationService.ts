@@ -1,11 +1,11 @@
 import { error } from "console";
 import { JobApplicationInterface } from "../../types/jobApplicationInterface";
-import { JobApplicationDbInterface } from "../../repositories/jobApplicationRepository";
+import { JobApplicationRepository } from "../../repositories/jobApplicationRepository";
 import { Types } from "mongoose";
 
 export const applyForJob = (
   application: JobApplicationInterface,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const result = jobApplicationDbRepository.applyForJob(application);
@@ -21,7 +21,7 @@ export const applyForJob = (
 export const existingApplication = (
   jobId: any,
   userId: any,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const result = jobApplicationDbRepository.alreadyApplied(jobId, userId);
@@ -33,7 +33,7 @@ export const existingApplication = (
 
 export const allApplications = (
   employerId: string,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const applications =
@@ -46,7 +46,7 @@ export const allApplications = (
 
 export const getApplicationDetails = (
   jobId: Types.ObjectId,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const details = jobApplicationDbRepository.jobApplicationDetails(jobId);
@@ -59,7 +59,7 @@ export const getApplicationDetails = (
 export const changeApplicationStatus = (
   jobId: Types.ObjectId,
   status: string,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const updatedApplication =
@@ -72,7 +72,7 @@ export const changeApplicationStatus = (
 
 export const userJobApplications = (
   userId: Types.ObjectId,
-  jobApplicationDbRepository: ReturnType<JobApplicationDbInterface>
+  jobApplicationDbRepository: ReturnType<JobApplicationRepository>
 ) => {
   try {
     const userApplications =jobApplicationDbRepository.userApplications(userId);

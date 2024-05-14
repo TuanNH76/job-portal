@@ -1,11 +1,11 @@
 import { HttpStatus } from "../../types/httpStatus";
 import AppError from "../../utils/appError";
-import { UserDbInterface } from "../../repositories/userRepository";
+import { UserRepository } from "../../repositories/userRepository";
 import { UserInterface } from "../../types/userInterface";
 
 export const findByEmail = async (
   email: string,
-  dbRepositoryUser: ReturnType<UserDbInterface>
+  dbRepositoryUser: ReturnType<UserRepository>
 ) => {
   try {
     const user = await dbRepositoryUser.getUserByEmail(email);
@@ -20,7 +20,7 @@ export const findByEmail = async (
 
 export const findUserDataById = async (
   id: string,
-  dbRepositoryUser: ReturnType<UserDbInterface>
+  dbRepositoryUser: ReturnType<UserRepository>
 ) => {
   try {
     const userData = await dbRepositoryUser.getUserDataById(id);
@@ -36,7 +36,7 @@ export const findUserDataById = async (
 export const updateUser = async (
   userId: string,
   updates: Partial<UserInterface>,
-  dbRepositoryUser: ReturnType<UserDbInterface>
+  dbRepositoryUser: ReturnType<UserRepository>
 ) => {
   try {
     const updatedUser = await dbRepositoryUser.updateUser(userId, updates);
@@ -52,8 +52,8 @@ export const updateUser = async (
 
 export const updateResume = async (
   userId: string,
-  updates: Partial<UserDbInterface>,
-  dbRepositoryUser: ReturnType<UserDbInterface> 
+  updates: Partial<UserRepository>,
+  dbRepositoryUser: ReturnType<UserRepository> 
 ) => {
   try {
     const updateResume = await dbRepositoryUser.updateUser(userId, updates);
@@ -68,7 +68,7 @@ export const updateResume = async (
 
 export const deleteResume = async(
   userId: string,
-  dbRepositoryUser: ReturnType<UserDbInterface>
+  dbRepositoryUser: ReturnType<UserRepository>
 ) => {
   try {
     await dbRepositoryUser.deleteResume(userId);

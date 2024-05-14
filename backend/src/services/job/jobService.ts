@@ -1,11 +1,11 @@
 import { HttpStatus } from "../../types/httpStatus";
 import { JobInterface } from "../../types/jobInterface";
 import AppError from "../../utils/appError";
-import { JobDbInterface } from "../../repositories/jobRepository";
+import { JobRepository } from "../../repositories/jobRepository";
 
 export const createJob = async (
   job: JobInterface,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const result = await jobRepository.createJob(job);
@@ -19,7 +19,7 @@ export const createJob = async (
 export const updateJob = async (
   job: JobInterface,
   jobId: string,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const updatedJob = await jobRepository.updateJob(jobId, job);
@@ -31,7 +31,7 @@ export const updateJob = async (
 
 export const deleteJob = async (
   jobId: string,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     await jobRepository.deleteJob(jobId);
@@ -42,7 +42,7 @@ export const deleteJob = async (
 
 export const findJobByEmployer = async (
   employerId: string,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const jobs = await jobRepository.findJobByEmployer(employerId);
@@ -53,7 +53,7 @@ export const findJobByEmployer = async (
 };
 
 export const getAllJobs = async (
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const allJobs = await jobRepository.findAllJobs();
@@ -65,7 +65,7 @@ export const getAllJobs = async (
 
 export const findJobById = async (
   jobId: string,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const jobData = await jobRepository.getJobById(jobId);
@@ -77,7 +77,7 @@ export const findJobById = async (
 
 export const distinctTitleLocationSalary = async (
   title: string,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const distinct = await jobRepository.titleLocationSalary(title);
@@ -91,7 +91,7 @@ export const filterTheJobs = async (
   role: string,
   location: string,
   salary: any,
-  jobRepository: ReturnType<JobDbInterface>
+  jobRepository: ReturnType<JobRepository>
 ) => {
   try {
     const jobs = await jobRepository.filterJob(role, location, salary);
