@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { clearEmployerToken } from "../../features/redux/slices/employer/employerTokenSlice";
-import { employerLogout } from "../../features/redux/slices/employer/employerDetailsSlice";
+import React, { useState } from "react";
 import {
   Navbar,
   Typography,
@@ -13,14 +11,15 @@ import {
 } from "@material-tailwind/react";
 import {
   UserCircleIcon,
-  ChevronDownIcon,
   InboxArrowDownIcon,
+  // LifebuoyIcon,
   PowerIcon,
 } from "@heroicons/react/24/outline";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { RootState } from "../../features/redux/reducers/Reducer";
-import { fetchEmployer } from "../../features/redux/slices/employer/employerDetailsSlice";
+import { employerLogout } from "../../features/redux/slices/employer/employerDetailsSlice";
+import { clearEmployerToken } from "../../features/redux/slices/employer/employerTokenSlice";
 
 interface ProfileMenuItem {
   label: string;
@@ -43,23 +42,19 @@ const profileMenuItems: ProfileMenuItem[] = [
 ];
 
 function ProfileMenu() {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const employer = useSelector(
     (state: RootState) => state.employerDetails.employerDetails
   );
 
   const closeMenu = () => setIsMenuOpen(false);
-  const handleLogout = () => {
-    dispatch(employerLogout());
-    dispatch(clearEmployerToken());
-    navigate("/");
-  };
-
-  useEffect(() => {
-    dispatch(fetchEmployer());
-  }, [dispatch]);
+    const handleLogout = () => {
+      dispatch(employerLogout());
+      dispatch(clearEmployerToken());
+      navigate("/");
+    };
 
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
@@ -73,17 +68,11 @@ function ProfileMenu() {
             variant="circular"
             size="sm"
             alt="candice wu"
-            className="border rounded-full border-blue-500 p-0.5 h-10 "
+            className="border border-blue-500 p-0.5 w-10"
             src={
               employer?.employerData?.image ??
               "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
             }
-          />
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3 w-3 text-black transition-transform ${
-              isMenuOpen ? "rotate-180" : ""
-            }`}
           />
         </Button>
       </MenuHandler>
@@ -98,7 +87,6 @@ function ProfileMenu() {
             } else if (label === "Inbox") {
               navigate("/employer/messenger");
             } else {
-              // Default action or close menu logic
               console.log("Default action or close menu");
             }
           };
@@ -132,12 +120,23 @@ function ProfileMenu() {
   );
 }
 
-export default function EmployerHeaderWithNav() {
+function EmployerHeader() {
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6">
+    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-foundItBg">
       <div className="relative mx-auto flex items-center text-blue-gray-900">
+        <nav className="flex items-center justify-between bg-foundItBg text-black p-4">
+          <div className="flex items-center">
+            <Link to={"/employer"}>
+              <h1 className="block font-bold text-3xl text-purple-600 hover:underline-offset-4 hover:underline">
+                JOB PORTAL
+              </h1>
+            </Link>
+          </div>
+        </nav>
         <ProfileMenu />
       </div>
     </Navbar>
   );
 }
+
+export default EmployerHeader;

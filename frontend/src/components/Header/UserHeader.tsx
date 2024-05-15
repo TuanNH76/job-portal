@@ -99,8 +99,7 @@ function UserHeader() {
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
-                          // src={user?.image ?? '../user.jpg'}
-                          src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+                          src={user?.image ?? 'https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png'}
                           alt="user"
                         />
                       </Menu.Button>
