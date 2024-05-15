@@ -31,8 +31,8 @@ export default function UserLogin() {
 
   const notify = (msg: string, type: string) =>
     type === "error"
-      ? toast.error(msg, { position: "top-right"})
-      : toast.success(msg, { position: "top-right"});
+      ? toast.error(msg, { position: "top-right" })
+      : toast.success(msg, { position: "top-right" });
 
   useEffect(() => {
     if (token) {
