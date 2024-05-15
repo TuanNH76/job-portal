@@ -45,7 +45,7 @@ export function Sidenav({ routes }: NavbarProps) {
       } fixed inset-0 z-10 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0`}
     >
       <div className={`relative border-b ${"border-blue-gray-50"}`}>
-        <Link to="/" className="flex items-center gap-4 py-6 px-8">
+        <Link to="#" className="flex items-center gap-4 py-6 px-8">
           <Avatar
             src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
             className="w-14"
