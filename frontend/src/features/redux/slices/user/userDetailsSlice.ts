@@ -31,19 +31,19 @@ const userDetailsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(fetchUser.pending, (state) => {
-        state.status = 'loading';
-    })
-    .addCase(fetchUser.fulfilled, (state, action: PayloadAction<any>) => {
-        state.status = 'succeeded';
+      .addCase(fetchUser.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchUser.fulfilled, (state, action: PayloadAction<any>) => {
+        state.status = "succeeded";
         state.userDetails = action.payload;
-    })
-    .addCase(fetchUser.rejected, (state, action)=> {
-        state.status = 'failed';
+      })
+      .addCase(fetchUser.rejected, (state, action) => {
+        state.status = "failed";
         state.error = action.error.message ?? null;
-    });
-  }
+      });
+  },
 });
 
-export const {clearUserDetails, setError} = userDetailsSlice.actions;
+export const { clearUserDetails, setError } = userDetailsSlice.actions;
 export default userDetailsSlice.reducer;

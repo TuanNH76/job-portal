@@ -175,11 +175,11 @@ const JobsByEmployer: React.FC<AllJobsProps> = ({ jobs }) => {
       </div>
 
       {showDeleteConfirmation && (
-        <ConfirmDelete
-          isOpen={showDeleteConfirmation}
-          onClose={() => setShowDeleteConfirmation(false)}
-          onConfirm={() => deleteJob(selectedJobId)}
-        />
+          <ConfirmDelete
+            isOpen={showDeleteConfirmation}
+            onClose={() => setShowDeleteConfirmation(false)}
+            onConfirm={() => deleteJob(selectedJobId)}
+          />
       )}
       <ToastContainer />
     </div>
