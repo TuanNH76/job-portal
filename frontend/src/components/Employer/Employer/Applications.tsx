@@ -100,11 +100,11 @@ export default function Applications() {
         </div>
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="w-full md:w-72">
-            <Input
-              label="Search"
+            <input
+              placeholder="Search"
               color="purple"
-              icon={<MagnifyingGlassIcon className="h-5 w-5" />}
               value={searchQuery}
+              className="py-1 px-4 rounded-xl border focus:border-purple-500"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
@@ -117,7 +117,7 @@ export default function Applications() {
               {TABLE_HEAD?.map((head, index) => (
                 <th
                   key={head}
-                  className="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
+                  className="cursor-pointer border-y border-blue-gray-100 bg-gray-100 p-4 transition-colors hover:bg-blue-gray-50"
                 >
                   <Typography
                     variant="small"
@@ -144,7 +144,11 @@ export default function Applications() {
                 <tr key={index}>
                   <td className={classes}>
                     <div className="flex items-center gap-3">
-                      <Avatar src={data?.userId?.image ?? '../user.jpg'} alt={"img"} size="sm" />
+                      <Avatar
+                        src={data?.userId?.image ?? "../user.jpg"}
+                        alt={"img"}
+                        className="rouded-full max-w-12"
+                      />
                       <div className="flex flex-col">
                         <Typography
                           variant="small"
@@ -186,12 +190,12 @@ export default function Applications() {
                             ? "Rejected"
                             : "Shortlisted"
                         }
-                        color={
+                        className={
                           data.applicationStatus === "Applied"
-                            ? "green"
+                            ? "bg-green-500" 
                             : data.applicationStatus === "Rejected"
-                            ? "red"
-                            : "orange"
+                            ? "bg-red-500"
+                            : "bg-orange-500"
                         }
                       />
                     </div>

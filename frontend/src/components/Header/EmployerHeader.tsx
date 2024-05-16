@@ -122,7 +122,7 @@ function ProfileMenu() {
 
 function EmployerHeader() {
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-foundItBg">
+    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-foundItBg shadow-md">
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <nav className="flex items-center justify-between bg-foundItBg text-black p-4">
           <div className="flex items-center">
