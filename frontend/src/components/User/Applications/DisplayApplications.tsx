@@ -23,9 +23,9 @@ function DisplayApplications() {
   }, [dispatch]);
 
   return (
-    <div>
-      <div className="mt-16 bg-gray-50 h-10 mx-auto max-w-screen-2xl rounded p-1 lg:pl-14">
-        <h3 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-inherit antialiased">
+    <div className="bg-purple-200">
+      <div className="mt-16 mb-10 h-10 mx-auto max-w-md rounded p-1 lg:pl-14">
+        <h3 className="block font-sans text-3xl pl-20 bg-purple-400  font-semibold leading-snug tracking-normal text-inherit antialiased">
           Application status
         </h3>
       </div>

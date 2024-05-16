@@ -22,10 +22,10 @@ function ApplicationTimeline({ applicationStatus }: any) {
         return (
           <>
             <TimelineItem className="h-28">
-              <TimelineConnector className="!w-[78px]" />
+              <TimelineConnector className="!w-[4px] ml-8 bg-gray-500" />
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
                 <TimelineIcon>
-                  <TicketIcon className="h-5 w-5" />
+                  <TicketIcon className="h-5 w-5 text-blue-500" />
                 </TimelineIcon>
                 <div className="flex flex-col gap-1">
                   <Typography color="blue-gray">Applied</Typography>
@@ -39,7 +39,7 @@ function ApplicationTimeline({ applicationStatus }: any) {
             <TimelineConnector className="w-[78px]" />
             <TimelineItem className="h-28">
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                <TimelineIcon color="green">
+                <TimelineIcon className="bg-green-500">
                   <InboxIcon className="h-5 w-5" />
                 </TimelineIcon>
                 <div className="flex flex-col gap-1">
