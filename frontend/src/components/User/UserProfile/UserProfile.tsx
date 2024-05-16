@@ -4,9 +4,9 @@ import { UserInterface } from "../../../types/UserInterface";
 import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { deleteResume } from "../../../features/axios/api/user/userDetails";
-// import ConfirmResumeDelete from "./ConfirmResumeDelete";
-// import AddResume from "./AddResumeModal";
-// import AddKeySkillsModal from "./AddKeySkills";
+import ConfirmResumeDelete from "./ConfirmResumeDelete";
+import AddResume from "./AddResumeModal";
+import AddKeySkillsModal from "./AddKeySkills";
 import {
   Card,
   CardBody,
@@ -252,13 +252,13 @@ function UserProfile() {
                                   key={skill}
                                   variant="ghost"
                                   color="teal"
-                                  className="rounded-full py-1.5"
+                                  className="rounded-full py-1.5 bg-[#a8fff371]"
                                   size="sm"
                                   value={skill}
                                 />
                               ))}
                           </div>
-                          <Tooltip content={"Manage"}>
+                          <Tooltip content={"Manage"} className="bg-black">
                             <Button
                               variant="text"
                               onClick={() => skillUploadButtonHandle()}
@@ -333,6 +333,7 @@ function UserProfile() {
                           <Button
                             variant="text"
                             onClick={() => resumeUploadButtonHandle()}
+                            className="bg-gray-400"
                           >
                             Add
                           </Button>
@@ -347,7 +348,7 @@ function UserProfile() {
         </CardBody>
       </Card>
 
-      {/* {showDeleteConfirmation && (
+      {showDeleteConfirmation && (
         <ConfirmResumeDelete
           isOpen={showDeleteConfirmation}
           onClose={() => setShowDeleteConfirmation(false)}
@@ -370,8 +371,8 @@ function UserProfile() {
           isOpen={showKeySkillUpload}
           onClose={() => setShowSkillUpload(false)}
           setIsUploaded={() => setIsUploaded(!isUploaded)}
-        /> */}
-      {/* </div> */}
+        />
+      </div>
       <ToastContainer className="z-50" />
     </div>
   );
