@@ -20,7 +20,7 @@ app.use(cors())
 // socket connection
 const io = new Server(server, {
     cors: {
-      origin: [configKeys.ORIGIN_PORT,"http://localhost:3000"]
+      origin: [configKeys.ORIGIN_PORT,"http://localhost:3000","http://localhost:5173"]
     }
   });
 
