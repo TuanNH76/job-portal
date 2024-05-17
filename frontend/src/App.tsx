@@ -4,6 +4,7 @@ import UserRouter from "./router/UserRouter";
 import EmployerRouter from "./router/EmployerRouter";
 import JobRouter from "./router/JobRouter";
 import ApplicationRouter from "./router/ApplicationRouter";
+import MessengerRouter from "./router/MessengerRouter";
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/employer/*" element={<EmployerRouter />} />
           <Route path="/job/*" element={<JobRouter />} />
           <Route path="/application/*" element={<ApplicationRouter />} />
+          <Route path="/messenger/*" element={<MessengerRouter />} />
         </Routes>
       </Router>
     </div>

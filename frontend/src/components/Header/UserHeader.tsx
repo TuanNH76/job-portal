@@ -39,10 +39,10 @@ function UserHeader() {
   };
 
   return (
-    <div className="fixed top-0 w-full bg-foundItBg z-50">
+    <div className="fixed top-0 w-full bg-purple-100 z-50">
       <Disclosure as="nav" className="bg-foundItBg">
         {({ open }) => (
-          <div className="bg-white">
+          <div className="">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

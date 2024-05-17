@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { userData } from "../../../features/axios/api/user/userDetails";
 import { UserInterface } from "../../../types/UserInterface";
 import { Link } from "react-router-dom";
@@ -55,7 +55,7 @@ function UserProfile() {
 
   return (
     <div className="pl-16 pr-16 pt-10">
-      <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url(https://media.istockphoto.com/id/1129644198/vector/recruitment-modern-line-design-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZBHS-k5azwnflpGW5gRmseB4CxUOpUUmGA3I45mJk9E=)] bg-auto bg-cover	bg-center">
+      <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url(https://media.istockphoto.com/id/1129644198/vector/recruitment-modern-line-design-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZBHS-k5azwnflpGW5gRmseB4CxUOpUUmGA3I45mJk9E=)] bg-center">
         <div className="absolute inset-0 h-full w-full bg-purple-500/50" />
       </div>
       <Card className="mx-3 -mt-16 mb-6 lg:mx-4 shadow-lg shadow-gray-400">

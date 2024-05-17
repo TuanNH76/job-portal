@@ -1,4 +1,3 @@
-import React from 'react'
 import EmployerHeader from '../../components/Header/EmployerHeader';
 import ViewApplicant from '../../components/Employer/Applications/ViewApplicant';
 

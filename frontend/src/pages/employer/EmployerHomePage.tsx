@@ -1,4 +1,3 @@
-import React from "react";
 import Sidenav from "../../components/Employer/Side-nav/SdeNav";
 import { Routes, Route } from "react-router-dom";
 import { NavRoutes } from "../../context/NavRoutes";
@@ -7,6 +6,8 @@ import Dashboard from "../../components/Employer/Employer/Dashboard";
 import EmployerProfile from "../../components/Employer/Profile/EmployerProfile";
 import EmployerEditProfile from "../../components/Employer/Profile/EmployerEditProfile";
 import AllJobsEmployer from "../../components/Employer/Employer/AllJobsEmployer";
+import Applications from "../../components/Employer/Employer/Applications";
+import EmployerMessenger from "../messenger/EmployerMessenger";
 
 
 function EmployerHomePage() {
@@ -24,7 +25,8 @@ function EmployerHomePage() {
           <Route path="/profile" element={<EmployerProfile />} />
           <Route path="/edit-profile" element={<EmployerEditProfile />} />
           <Route path="/all-jobs" element={<AllJobsEmployer />} />
-
+          <Route path="/applications" element={<Applications />} />
+          <Route path="/messenger" element={<EmployerMessenger />} />
         </Routes>
       </div>
     </div>
