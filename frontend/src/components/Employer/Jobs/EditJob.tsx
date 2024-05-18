@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import { jobUpdateValidationSchema } from "../../../utils/validation";
 import { JobCreationPayload } from "../../../types/PayloadInterface";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import updateJob from "../../../features/axios/api/employer/updateJob";
 import { jobDetailsEmployer } from "../../../features/axios/api/employer/jobDetailsEmployer";
 import { JobsInterface } from "../../../types/JobInterface";
@@ -66,8 +66,8 @@ function EditJob() {
   return (
     <div>
       <div className="pl-40 pt-2">
-        <Breadcrumbs className="bg-foundItBg">
-          <a href="#" className="opacity-60">
+        <Breadcrumbs className="bg-white">
+          <Link to={"/employer/all-jobs"} className="opacity-60">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -76,15 +76,17 @@ function EditJob() {
             >
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
-          </a>
-          <a href="#" className="opacity-60">
+          </Link>
+          <Link to={"/employer/all-jobs"}>
             <span>Jobs</span>
-          </a>
+          </Link>
           <a href="#">Edit Job details</a>
         </Breadcrumbs>
       </div>
       <div className="max-w-lg mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Edit job details</h1>
+        <h1 className="text-2xl font-bold mb-4 bg-white text-center uppercase">
+          Edit job details
+        </h1>
         <div className="rounded border border-gray-300 p-4 bg-white">
           <form onSubmit={handleSubmit(submitHandler)}>
             <div className="mb-4 flex justify-between">

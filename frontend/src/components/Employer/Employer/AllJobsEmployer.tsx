@@ -21,7 +21,7 @@ import {
 } from "@material-tailwind/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 5;
 
 function AllJobsEmployer() {
   const dispatch = useDispatch();
@@ -84,15 +84,15 @@ function AllJobsEmployer() {
   };
 
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full w-full  shadow-xl bg-purple-100 p-4">
       <div className="">
         <CardHeader floated={false} shadow={false} className="rounded-none">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row bg-purple-100">
             <div className="mb-4">
               <Link to={"/job/create-job"}>
                 <button
                   type="button"
-                  className="inline-flex items-center rounded-md bg-purple-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="inline-flex items-center rounded-md bg-purple-600 px-4 mx-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   <PlusIcon
                     className="-ml-0.5 mr-1.5 h-5 w-5"
@@ -124,8 +124,8 @@ function AllJobsEmployer() {
         </CardBody>
         <ToastContainer />
       </div>
-      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
-        <Typography variant="small" color="blue-gray" className="font-normal">
+      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4 ">
+        <Typography variant="small" color="blue-gray" className="font-normal text-lg">
           Page {currentPage} of {Math.ceil(filterJobs?.length / ITEMS_PER_PAGE)}
         </Typography>
         <div className="flex gap-2">

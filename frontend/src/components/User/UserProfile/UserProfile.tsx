@@ -63,10 +63,13 @@ function UserProfile() {
           <div className="mb-10 flex items-center justify-between gap-6">
             <div className="flex items-center gap-6">
               <Avatar
-                src={userDetails?.image ?? ""}
+                src={
+                  userDetails?.image ??
+                  "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+                }
                 alt="img"
                 size="xl"
-                className="rounded-lg shadow-lg shadow-blue-gray-500/40 max-w-24"
+                className="rounded-full shadow-lg shadow-blue-gray-500/40 max-w-24"
               />
               <div>
                 <Typography variant="h5" color="blue-gray" className="mb-1">

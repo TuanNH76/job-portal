@@ -9,11 +9,6 @@ export const NavRoutes = [
     layout: "admin",
     pages: [
       {
-        icon: <FaChartBar {...icon} />,
-        name: "dashboard",
-        path: "/employer/dashboard",
-      },
-      {
         icon: <FaBriefcase {...icon} />,
         name: "Jobs",
         path: "/employer/all-jobs",

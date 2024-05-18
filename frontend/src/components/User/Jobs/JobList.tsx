@@ -7,7 +7,7 @@ import {
   BriefcaseIcon,
   CalendarIcon,
   ChevronDownIcon,
-  CurrencyRupeeIcon,
+  CurrencyDollarIcon,
   LinkIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
@@ -34,7 +34,9 @@ const JobList: React.FC<AllJobsProps> = ({ jobs, selected, setSelected }) => {
     <>
       <div
         className={`border border-gray-300 rounded-md p-4 mb-4 bg-white ${
-          selected === jobs._id ? "ring-2 ring-purple-500 transition-all duration-500" : ""
+          selected === jobs._id
+            ? "ring-2 ring-purple-500 transition-all duration-500"
+            : ""
         }`}
       >
         <div className=" lg:flex lg:items-center lg:justify-between">
@@ -59,8 +61,8 @@ const JobList: React.FC<AllJobsProps> = ({ jobs, selected, setSelected }) => {
                 {jobs.location}
               </div>
               <div className="mt-2 flex items-center text-sm text-gray-500">
-                <CurrencyRupeeIcon
-                  className="mr-1.5 h-5 w-5 flex-shrink-0 text-purple-400"
+                <CurrencyDollarIcon
+                  className="mr-1.5 h-5 w-5 flex-shrink-0"
                   aria-hidden="true"
                 />
                 {jobs.salary}

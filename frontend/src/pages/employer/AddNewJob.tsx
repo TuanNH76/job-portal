@@ -4,11 +4,11 @@ import EmployerHeader from "../../components/Header/EmployerHeader";
 
 function AddNewJob() {
   return (
-    <div className="bg-foundItBg">
-        <EmployerHeader/>
-        <PostJob/>
+    <div className="bg-purple-200">
+      <EmployerHeader />
+      <PostJob />
     </div>
-  )
+  );
 }
 
 export default AddNewJob;

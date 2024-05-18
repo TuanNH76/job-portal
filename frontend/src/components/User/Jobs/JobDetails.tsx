@@ -14,7 +14,7 @@ import {
 import {
   BriefcaseIcon,
   CalendarIcon,
-  CurrencyRupeeIcon,
+  CurrencyDollarIcon,
   LinkIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
@@ -156,7 +156,7 @@ function JobDetails() {
                   </dt>
                   <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                     <div className="flex items-center">
-                      <CurrencyRupeeIcon className="w-4 h-4 mr-1 text-purple-600" />
+                      <CurrencyDollarIcon className="w-4 h-4 mr-1" />
                       <span>{jobDetails.salary}</span>
                     </div>
                   </dd>

@@ -10,10 +10,11 @@ import {
 import {
   BriefcaseIcon,
   CalendarIcon,
-  CurrencyRupeeIcon,
+  CurrencyDollarIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
 import { Breadcrumbs } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 function EmployerViewJob() {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ function EmployerViewJob() {
     <div className="">
       <div className="pl-40 pt-2">
         <Breadcrumbs className="bg-white">
-          <a href="#" className="opacity-60">
+          <Link to={"/employer/all-jobs"} className="opacity-60">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
@@ -60,14 +61,14 @@ function EmployerViewJob() {
             >
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
-          </a>
-          <a href="#" className="opacity-60">
+          </Link>
+          <Link to={"/employer/all-jobs"} className="opacity-60">
             <span>Jobs</span>
-          </a>
+          </Link>
           <a href="#">View job details</a>
         </Breadcrumbs>
       </div>
-      <div className="max-w-md mx-auto">
+      <div className="max-w-md mx-auto bg-white">
         <div className="p-4 rounded-lg">
           <div className="flex items-center mb-2">
             <BriefcaseIcon className="w-6 h-6 mr-2 text-purple-500" />
@@ -146,7 +147,7 @@ function EmployerViewJob() {
                 </dt>
                 <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                   <div className="flex items-center">
-                    <CurrencyRupeeIcon className="w-4 h-4 mr-1 text-purple-600" />
+                    <CurrencyDollarIcon className="w-4 h-4 mr-1" />
                     <span>{jobDetails?.salary}</span>
                   </div>
                 </dd>

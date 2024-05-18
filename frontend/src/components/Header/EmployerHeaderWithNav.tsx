@@ -134,7 +134,7 @@ function ProfileMenu() {
 
 export default function EmployerHeaderWithNav() {
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6">
+    <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-purple-200">
       <div className="relative mx-auto flex items-center text-blue-gray-900">
         <ProfileMenu />
       </div>

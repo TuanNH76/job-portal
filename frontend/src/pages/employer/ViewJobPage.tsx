@@ -3,7 +3,7 @@ import EmployerHeader from "../../components/Header/EmployerHeader";
 
 function ViewJobPage() {
   return (
-    <div>
+    <div className="bg-purple-200">
       <EmployerHeader />
       <EmployerViewJob />
     </div>

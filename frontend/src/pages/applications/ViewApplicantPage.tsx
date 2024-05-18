@@ -3,7 +3,7 @@ import ViewApplicant from '../../components/Employer/Applications/ViewApplicant'
 
 function ViewApplicantPage() {
   return (
-    <div className=''>
+    <div className='bg-purple-200'>
         <EmployerHeader/>
         <ViewApplicant/>
     </div>

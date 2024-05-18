@@ -114,7 +114,7 @@ function Messenger() {
   };
 
   return (
-    <div>
+    <div className="bg-purple-200">
       <UserHeader />
       <div className="pt-16 h-screen pb-[70px] flex mx-auto max-w-screen-xl p-2 mt-4 rounded">
         <div className="flex-auto p-3">
@@ -124,7 +124,7 @@ function Messenger() {
               placeholder="Search User"
               type="text"
             />
-            <div className="h-96 overflow-y-auto">
+            <div className="h-96 w-5/6 overflow-y-auto bg-gray-100">
               {conversations?.map((c, index) => (
                 <div onClick={() => setCurrentChat(c)} key={index}>
                   <Conversations
@@ -138,7 +138,7 @@ function Messenger() {
           </div>
         </div>
 
-        <div className="flex-auto p-3 w-64">
+        <div className="flex-auto p-3 w-64 bg-gray-50">
           <div className="flex flex-col justify-between h-full relative">
             {currentChat ? (
               <>
@@ -155,7 +155,7 @@ function Messenger() {
                 </div>
                 <div className="mt-2 flex items-center justify-between">
                   <textarea
-                    className="w-10/12 h-24 p-3 focus:outline-none"
+                    className="w-11/12 h-16 p-3 focus:outline-none focus:border-purple-400 bg-white border-2 border-gray-500"
                     onChange={(e) => setNewMessage(e.target.value)}
                     placeholder="Write something..."
                     value={newMessage}

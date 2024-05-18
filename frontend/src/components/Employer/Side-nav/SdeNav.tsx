@@ -42,7 +42,7 @@ export function Sidenav({ routes }: NavbarProps) {
     <aside
       className={`${sidenavTypes[sidenavType]} ${
         openSidenav ? "translate-x-0" : "-translate-x-80"
-      } fixed inset-0 z-10 my-4 ml-4 h-[calc(100vh-32px)] bg-[#ebeaeb] shadow-sm w-72 rounded-xl transition-transform duration-300 xl:translate-x-0`}
+      } fixed inset-0 z-10 my-4 ml-4 h-[calc(100vh-32px)] bg-[#f5f5f5] shadow-sm w-72 rounded-xl transition-transform duration-300 xl:translate-x-0`}
     >
       <div className={`relative border-b ${"border-blue-gray-50"}`}>
         <Link to="#" className="flex items-center gap-4 py-6 px-8">

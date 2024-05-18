@@ -3,7 +3,7 @@ import EmployerHeader from "../../components/Header/EmployerHeader";
 
 function EditJobPage() {
   return (
-    <div className="bg-foundItBg">
+    <div className="bg-purple-200">
       <EmployerHeader />
       <EditJob />
     </div>

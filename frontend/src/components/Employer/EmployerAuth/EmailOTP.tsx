@@ -69,10 +69,10 @@ function EmailOTP() {
   };
 
   return (
-    <div className="h-screen py-20 px-3 mt-16">
-      <div className="container mx-auto">
+    <div className="h-[91vh] py-20 px-3 bg-purple-200">
+      <div className="container mx-auto ">
         <div className="max-w-sm mx-auto md:max-w-lg">
-          <div className="w-full">
+          <div className="w-full bg-gray-100 shadow-xl">
             <div className="shadow-xl h-11/12  py-3 rounded text-center">
               <h1 className="text-2xl font-bold">OTP Verification</h1>
               <div className="flex flex-col mt-4">

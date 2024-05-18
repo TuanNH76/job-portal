@@ -200,7 +200,7 @@ function DisplayJobs(this: any) {
         </Navbar>
       </div>
 
-      <div className="p-28 px-4 sm:px-8 md:px-16 lg:px-32 flex flex-wrap min-h-screen">
+      <div className="p-28 px-4 sm:px-8 bg-purple-200 md:px-16 lg:px-32 flex flex-wrap min-h-screen">
         <div className="w-full sm:w-2/4 p-4 sm:p-6">
           <div
             className="overflow-y-auto p-6"

@@ -86,16 +86,12 @@ export default function Applications() {
   };
 
   return (
-    <Card className="h-full w-full">
-      <CardHeader floated={false} shadow={false} className="rounded-none">
+    <Card className="h-full w-full bg-purple-100">
+      <CardHeader floated={false} shadow={false} className="rounded-none bg-purple-100 pl-4">
         <div className="mb-8 flex items-center justify-between gap-8">
-          <div>
-            <Typography variant="h5" color="blue-gray">
-              All applications
-            </Typography>
-            <Typography color="gray" className="mt-1 font-normal">
-              See information about all applicants
-            </Typography>
+          <div className="">
+            <h1 className="uppercase font-bold text-3xl text-gray-700">All applications</h1>
+            <h3 className="mt-1 ">See information about all applicants</h3>
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -104,7 +100,7 @@ export default function Applications() {
               placeholder="Search"
               color="purple"
               value={searchQuery}
-              className="py-1 px-4 rounded-xl border focus:border-purple-500"
+              className="py-1 px-4 rounded-xl border-2 focus:border-purple-500 focus:outline-none"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
@@ -192,7 +188,7 @@ export default function Applications() {
                         }
                         className={
                           data.applicationStatus === "Applied"
-                            ? "bg-green-500" 
+                            ? "bg-green-500"
                             : data.applicationStatus === "Rejected"
                             ? "bg-red-500"
                             : "bg-orange-500"

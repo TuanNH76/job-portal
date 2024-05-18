@@ -83,16 +83,16 @@ function ViewApplicant() {
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
           </a>
-          <a href="#" className="opacity-60">
+          <Link to={"/employer/all-jobs"} className="opacity-60">
             <span>Jobs</span>
-          </a>
+          </Link>
           <a href="#">Applicant details</a>
         </Breadcrumbs>
       </div>
       <div className="mx-auto max-w-[1180px] p-2 mt-4 rounded lg:pl-6">
         <div className="max-w-7xl p-6">
           <div className="px-4 sm:px-0">
-            <h1 className="text-3xl font-semibold leading-7 text-gray-900">
+            <h1 className="text-3xl font-semibold leading-7 text-gray-900 uppercase">
               Applicant Information
             </h1>
             <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
@@ -147,7 +147,7 @@ function ViewApplicant() {
           <div className="mt-6 border-t border-gray-100">
             <dl className="divide-y divide-gray-100">
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 bg-gray-100">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="px-4 text-lg font-medium leading-6 text-gray-900">
                   Full name
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -155,7 +155,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="px-4 text-lg font-medium leading-6 text-gray-900">
                   Application for
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -163,7 +163,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 bg-gray-100">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="px-4 text-lg font-medium leading-6 text-gray-900">
                   Email address
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -171,7 +171,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="px-4 text-lg font-medium leading-6 text-gray-900">
                   Phone
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -179,7 +179,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 bg-gray-100">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="text-lg px-4 font-medium leading-6 text-gray-900">
                   Application status
                 </dt>
                 <dd className="flex mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -204,7 +204,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="text-lg px-4 font-medium leading-6 text-gray-900">
                   About
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -212,7 +212,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 bg-gray-100">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="text-lg px-4 font-medium leading-6 text-gray-900">
                   Experience
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -271,7 +271,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="text-lg px-4 font-medium leading-6 text-gray-900">
                   Key Skills
                 </dt>
                 <dd className="mt-1 text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -291,7 +291,7 @@ function ViewApplicant() {
                 </dd>
               </div>
               <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0 bg-gray-100">
-                <dt className="text-lg font-medium leading-6 text-gray-900">
+                <dt className="text-lg px-4 font-medium leading-6 text-gray-900">
                   Attachments
                 </dt>
                 <dd className="mt-2 text-lg text-gray-900 sm:col-span-2 sm:mt-0">

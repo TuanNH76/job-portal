@@ -58,11 +58,6 @@ function UserHeader() {
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
                   <div className="flex flex-shrink-0 items-center">
-                    <img
-                      className="block h-8 w-auto lg:hidden"
-                      src="https://res.cloudinary.com/dgjwhf8i3/image/upload/v1685793152/Screenshot_2023-06-03_172145_pfhklc.jpg"
-                      alt="Your Company"
-                    />
                     <Link to={"/user/home"}>
                       <h1 className="block font-bold text-3xl text-purple-600 hover:underline-offset-4 hover:underline">
                         JOB PORTAL

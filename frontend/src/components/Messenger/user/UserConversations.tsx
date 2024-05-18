@@ -35,7 +35,7 @@ function Conversations({ conversation, currentUser, onlineUsers }: any) {
   }, [employer?._id, onlineUsers]);
 
   return (
-    <div className="flex items-center mt-5 p-3 cursor-pointer hover:bg-blue-gray-50 relative">
+    <div className="flex items-center mt-5 p-3 cursor-pointer hover:bg-purple-400 relative">
       <img
         className="mr-5 w-10 h-10 rounded-full object-cover"
         src={employer?.image ?? '../user.jpg'}

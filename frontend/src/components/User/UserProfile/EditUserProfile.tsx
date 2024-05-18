@@ -12,7 +12,9 @@ import { Avatar } from "@material-tailwind/react";
 function EditUserProfile() {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState<UserInterface | undefined>();
-  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [selectedImg, setSelectedImg] = useState<string | null>(
+    "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+  );
 
   useEffect(() => {
     async function getUserData() {
@@ -113,7 +115,7 @@ function EditUserProfile() {
                       src={selectedImg || userDetails?.image}
                       alt="image"
                       size="lg"
-                      className="rounded-lg shadow-lg shadow-blue-gray-500/40 w-20"
+                      className="rounded-full shadow-lg shadow-blue-gray-500/40 w-20"
                     />
                     <label className="relative cursor-pointer bg-purple-200 hover:bg-purple-300 py-2 px-4 rounded-md shadow-sm">
                       <span className="text-black">Choose File</span>
