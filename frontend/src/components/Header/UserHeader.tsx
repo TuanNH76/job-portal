@@ -154,17 +154,6 @@ function UserHeader() {
                           </Link>
                         </Menu.Item>
                         <Menu.Item>
-                          <Link to={"/employer/login"}>
-                            <button
-                              className={classNames(
-                                "block px-4 py-2 text-sm text-purple-700"
-                              )}
-                            >
-                              Employer login
-                            </button>
-                          </Link>
-                        </Menu.Item>
-                        <Menu.Item>
                           <button
                             className={classNames(
                               "block px-4 py-2 text-sm text-purple-700"

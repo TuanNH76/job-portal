@@ -54,7 +54,7 @@ function UserProfile() {
   };
 
   return (
-    <div className="pl-16 pr-16 pt-10">
+    <div className="pl-16 pr-16 pt-10 bg-purple-100">
       <div className="relative mt-8 h-72 w-full overflow-hidden rounded-xl bg-[url(https://media.istockphoto.com/id/1129644198/vector/recruitment-modern-line-design-style-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZBHS-k5azwnflpGW5gRmseB4CxUOpUUmGA3I45mJk9E=)] bg-center">
         <div className="absolute inset-0 h-full w-full bg-purple-500/50" />
       </div>

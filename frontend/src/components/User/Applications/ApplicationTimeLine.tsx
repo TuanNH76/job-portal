@@ -36,7 +36,7 @@ function ApplicationTimeline({ applicationStatus }: any) {
               </TimelineHeader>
               <TimelineBody></TimelineBody>
             </TimelineItem>
-            <TimelineConnector className="w-[78px]" />
+            <TimelineConnector className="!w-[4px] ml-8 bg-gray-500" />
             <TimelineItem className="h-28">
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
                 <TimelineIcon className="bg-green-500">
@@ -72,6 +72,7 @@ function ApplicationTimeline({ applicationStatus }: any) {
               <TimelineBody></TimelineBody>
             </TimelineItem>
             <TimelineItem className="h-28">
+              <TimelineConnector className="!w-[4px] ml-8 bg-green-500" />
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
                 <TimelineIcon color="green">
                   <InboxIcon className="h-5 w-5" />
@@ -120,7 +121,7 @@ function ApplicationTimeline({ applicationStatus }: any) {
             </TimelineItem>
             <TimelineConnector className="!w-[4px] ml-8 bg-gray-500" />
             <TimelineItem className="h-28">
-              <TimelineConnector className="!w-[4px] ml-8 bg-gray-500" />
+              <TimelineConnector className="!w-[4px] ml-8 bg-red-500" />
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
                 <TimelineIcon color="green">
                   <InboxIcon className="h-5 w-5" />
@@ -134,7 +135,7 @@ function ApplicationTimeline({ applicationStatus }: any) {
               </TimelineHeader>
               <TimelineBody></TimelineBody>
             </TimelineItem>
-            <TimelineConnector className="w-[78px]" />
+            <TimelineConnector className="!w-[4px] ml-8 bg-gray-500" />
             <TimelineItem className="h-28">
               <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
                 <TimelineIcon color="red">
