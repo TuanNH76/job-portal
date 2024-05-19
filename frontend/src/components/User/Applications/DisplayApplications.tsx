@@ -5,9 +5,10 @@ import { RootState } from "../../../features/redux/reducers/Reducer";
 import { useEffect, useState } from "react";
 import { JobsInterface } from "../../../types/JobInterface";
 import ApplicationStatus from "./ApplicationStatus";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function DisplayApplications() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const applications = useSelector(
     (state: RootState) => state.userApplications.applications
   );

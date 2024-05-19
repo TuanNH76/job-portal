@@ -20,9 +20,10 @@ import {
 } from "@heroicons/react/20/solid";
 import { isApplied } from "../../../features/axios/api/user/applyForJob";
 import { applyForJob } from "../../../features/axios/api/user/applyForJob";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function JobDetails() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const jobId: string =
     useSelector((state: RootState) => state.jobDetails.jobId) ?? "";
   const jobDetails = useSelector(

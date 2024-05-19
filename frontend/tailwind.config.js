@@ -15,6 +15,6 @@ export default withMT({
         limeGreen: '#0AD20A',
       },
     },
-    plugins: [require("tailwind-scrollbar"), require("@tailwindcss/forms")],
+    plugins: [require("tailwind-scrollbar")],
   },
 });

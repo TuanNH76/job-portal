@@ -12,6 +12,7 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { FaFacebookMessenger } from "react-icons/fa";
 
+
 import {
   Menu,
   MenuHandler,
@@ -21,6 +22,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../features/redux/reducers/Reducer";
 import { fetchEmployer } from "../../../features/redux/slices/employer/employerDetailsSlice";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function ViewApplicant() {
   const [applicationData, setApplicationData] = useState<ApplicationDetails>();
@@ -30,7 +32,7 @@ function ViewApplicant() {
   )?.employerData?._id;
   const resumeUrl = applicationData?.userId?.resume;
   const { id } = useParams();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
   useEffect(() => {

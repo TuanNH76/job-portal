@@ -21,6 +21,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { RootState } from "../../features/redux/reducers/Reducer";
 import { fetchEmployer } from "../../features/redux/slices/employer/employerDetailsSlice";
+import {AppDispatch} from "../../features/redux/app/Store";
 
 interface ProfileMenuItem {
   label: string;
@@ -43,7 +44,7 @@ const profileMenuItems: ProfileMenuItem[] = [
 ];
 
 function ProfileMenu() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const employer = useSelector(

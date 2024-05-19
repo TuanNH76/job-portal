@@ -12,6 +12,7 @@ import {
   clearUserDetails,
 } from "../../features/redux/slices/user/userDetailsSlice";
 import { unwrapResult } from "@reduxjs/toolkit";
+import {AppDispatch} from "../../features/redux/app/Store";
 
 const navigation = [{ name: "Jobs", href: "/job/all-jobs", current: false }];
 
@@ -20,7 +21,7 @@ function classNames(...classes: string[]) {
 }
 
 function UserHeader() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const user = useSelector((state: RootState) => state.userDetails.userDetails);
 

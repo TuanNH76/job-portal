@@ -15,9 +15,10 @@ import {
   getUserMessages,
   postUserMessages,
 } from "../../features/axios/api/messenger/messages";
+import {AppDispatch} from "../../features/redux/app/Store";
 
 function Messenger() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const scrollRef = useRef<HTMLDivElement>(null);
   const socket = useRef<Socket | null>(null);
   const user = useSelector(

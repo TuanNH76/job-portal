@@ -15,9 +15,10 @@ import {
 } from "@heroicons/react/20/solid";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function EmployerViewJob() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const jobId: string =
     useSelector((state: RootState) => state.employerJobDetails.jobId) ?? "";
 

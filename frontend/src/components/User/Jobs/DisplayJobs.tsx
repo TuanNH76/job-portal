@@ -12,9 +12,10 @@ import {
   distinctTitleLocationSalary,
   filterJobs,
 } from "../../../features/axios/api/user/jobDetails";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function DisplayJobs(this: any) {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const jobs = useSelector((state: RootState) => state.allJobs.jobs);
   const status = useSelector((state: RootState) => state.allJobs.status);
   const error = useSelector((state: RootState) => state.allJobs.error);

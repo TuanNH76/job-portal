@@ -14,9 +14,10 @@ import {
   MapPinIcon,
 } from "@heroicons/react/20/solid";
 import ApplicationTimeline from "./ApplicationTimeLine";
+import {AppDispatch} from "../../../features/redux/app/Store";
 
 function ApplicationStatus() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const applicationId: string =
     useSelector((state: RootState) => state.applicationDetails.applicationId) ??
     "";
