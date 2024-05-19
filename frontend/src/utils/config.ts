@@ -1,6 +1,6 @@
 const configKeys = {
-  API_URL: "http://localhost:8080/api/",
-  SOCKET_PORT: "http://localhost:8080"
+  API_URL: "https://jobportal-api-v1.vercel.app/api/",
+  SOCKET_PORT: "https://jobportal-test-v1.onrender.com"
 };
  
 export default configKeys;
