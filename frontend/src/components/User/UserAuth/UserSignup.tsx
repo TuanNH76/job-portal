@@ -10,6 +10,7 @@ import GoogleAuthComponent from "./GoogleAuthComponent";
 
 export default function UserSignup() {
   const navigate = useNavigate();
+  // @ts-ignore
   const {
     register,
     handleSubmit,
