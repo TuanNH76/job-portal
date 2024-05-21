@@ -116,14 +116,10 @@ function Messenger() {
   return (
     <div className="bg-purple-200">
       <UserHeader />
-      <div className="pt-16 h-screen pb-[70px] flex mx-auto max-w-screen-xl p-2 mt-4 rounded">
+      <div className="pt-16 h-screen pb-[70px] flex  mx-auto max-w-screen-xl p-2 mt-4 rounded">
         <div className="flex-auto p-3">
           <div>
-            <input
-              className="w-5/6 p-3 border-b border-solid border-gray-500 focus:outline-none"
-              placeholder="Search User"
-              type="text"
-            />
+
             <div className="h-96 w-5/6 overflow-y-auto bg-gray-100">
               {conversations?.map((c, index) => (
                 <div onClick={() => setCurrentChat(c)} key={index}>

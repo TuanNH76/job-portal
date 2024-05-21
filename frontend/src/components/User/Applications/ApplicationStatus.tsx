@@ -34,7 +34,7 @@ function ApplicationStatus() {
   }, [dispatch, applicationId]);
 
   return (
-    <div className={`w-[500px] mx-auto transition-opacity duration-500 bg-gray-200`}>
+    <div className={`w-[450px] mx-auto transition-opacity duration-500 bg-gray-200`}>
       {applicationDetails ? (
         <div className="max-w-md mx-auto ">
           <div className="p-4 rounded-lg">

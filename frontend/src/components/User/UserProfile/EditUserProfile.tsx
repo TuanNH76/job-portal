@@ -112,7 +112,7 @@ function EditUserProfile() {
                   </label>
                   <div className="mt-2 flex items-center gap-x-3">
                     <Avatar
-                      src={selectedImg || userDetails?.image}
+                      src={ userDetails?.image || selectedImg }
                       alt="image"
                       size="lg"
                       className="rounded-full shadow-lg shadow-blue-gray-500/40 w-20"

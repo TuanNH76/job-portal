@@ -61,7 +61,7 @@ export default function UserLogin() {
   };
   return (
     <div className="flex justify-start h-screen bg-purple-200">
-      <div className="ml-32 flex justify-center items-center">
+      <div className="ml-32 justify-center items-center hidden lg:flex">
         <img
           src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/442477673_2113383572357269_3861589155860855002_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=K6Zy42Knl1cQ7kNvgGntU47&_nc_ht=scontent.fhan14-1.fna&oh=00_AYBX6ubal9bWuFzwtC6ef9B0vgG3uPotM-jlDxLbExLreQ&oe=664F7481"
           alt="Img"
