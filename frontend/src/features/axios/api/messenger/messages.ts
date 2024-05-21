@@ -4,7 +4,7 @@ import setupAxiosInterceptors from "../../interceptors/axiosInterceptor";
 import setupAxiosInterceptorsEmployer from "../../interceptors/axiosInterceptorEmployer";
 
 const userApi = setupAxiosInterceptors();
-const empApi = setupAxiosInterceptorsEmployer();
+const empApi = setupAxiosInterceptorsEmployer();  
 
 export const getUserMessages = async (conId: string): Promise<any> => {
   try {

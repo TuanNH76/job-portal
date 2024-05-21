@@ -141,7 +141,10 @@ export default function Applications() {
                   <td className={classes}>
                     <div className="flex items-center gap-3">
                       <Avatar
-                        src={data?.userId?.image ?? "../user.jpg"}
+                        src={
+                          data?.userId?.image ||
+                          "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+                        }
                         alt={"img"}
                         className="rouded-full max-w-12"
                       />

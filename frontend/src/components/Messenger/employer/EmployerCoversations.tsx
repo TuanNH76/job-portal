@@ -36,14 +36,25 @@ function Conversations({ conversation, currentUser, onlineUsers }: any) {
     <div className="flex items-center mt-5 p-3 cursor-pointer hover:bg-purple-500 relative">
       <img
         className="mr-5 w-10 h-10 rounded-full object-cover"
-        src={user?.image ?? '../user.jpg'}
+        src={
+          user?.image ??
+          "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+        }
         alt=""
       />
       <div className="flex flex-col">
         <span className="font-semibold">{user?.name}</span>
-        { isOnline? <span className="text-gray-500">online</span> : <span className="text-gray-500">offline</span>}
+        {isOnline ? (
+          <span className="text-gray-500">online</span>
+        ) : (
+          <span className="text-gray-500">offline</span>
+        )}
       </div>
-      { isOnline? <div className="absolute top-3 left-10 h-3 w-3 rounded-full bg-limeGreen"></div>: <div></div>}
+      {isOnline ? (
+        <div className="absolute top-3 left-10 h-3 w-3 rounded-full bg-limeGreen"></div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }

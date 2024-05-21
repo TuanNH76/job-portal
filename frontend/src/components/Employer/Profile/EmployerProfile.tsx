@@ -129,7 +129,7 @@ function EmployerProfile() {
                       variant="small"
                       className="font-normal text-blue-gray-500"
                     >
-                      {employerDetails?.about ?? ""}
+                      {employerDetails?.about ?? "A healthy company"}
                     </Typography>
                   </li>
                   <hr className="my-1 border-blue-gray-50" />

@@ -8,8 +8,8 @@ export const sendEmailService = () => {
     port: 465,
    secure: true,
     auth: {
-      user: configKeys.NODE_MAIL_USER,
-      pass: configKeys.NODE_MAIL_PASS,
+      user: "truong22082002@gmail.com",
+      pass: "ytmt hanr lauo iabj",
     },
   });
 
@@ -27,7 +27,7 @@ export const sendEmailService = () => {
 
     console.log(otpData);
     const mailOptions = {
-      from: "ngoctran991973@gmail.com",
+      from: "truong22082002@gmail.com",
       to: email,
       subject: "OTP for Login",
       text: `Your OTP for login is: ${otp}`,

@@ -33,12 +33,16 @@ function Message({ message, own , id}: MessageType) {
       <div className="flex">
         <img
           className="mr-2 w-8 h-8 rounded-full object-cover"
-          src= {user?.image ?? '../user.jpg'}
-          alt=""
+          src={
+            user?.image ||
+            "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+          }
+          alt="avatar"
         />
         <p
           className={`p-3 rounded-3xl max-w-xs ${
-            own ? "bg-gray-300 text-black" : "bg-purple-600 text-white"}`}
+            own ? "bg-gray-300 text-black" : "bg-purple-600 text-white"
+          }`}
         >
           {message?.text}
         </p>

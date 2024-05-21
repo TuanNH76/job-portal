@@ -121,7 +121,7 @@ function Messenger() {
               placeholder="Search user"
               type="text"
             />
-            <div className="h-80 w-5/6 bg-purple-100">
+            <div className="h-full w-5/6 bg-purple-100">
               {conversations?.map((c, index) => (
                 <div onClick={() => setCurrentChat(c)} key={index}>
                   <Conversations

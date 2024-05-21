@@ -34,7 +34,10 @@ function Message({ message, own, id }: MessageType) {
       <div className="flex">
         <img
           className="mr-2 w-8 h-8 rounded-full object-cover"
-          src={user?.image ?? '../user.jpg'}
+          src={
+            user?.image ??
+            "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+          }
           alt=""
         />
         <p
